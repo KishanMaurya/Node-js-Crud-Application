@@ -7,19 +7,34 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
-<form action="/customers/update/<%= id %>" method="post" name="form1">
-<div class="form-group">
-  <label for="exampleInputPassword1">Name</label>
-  <input type="text" class="form-control" name="name" id="name" value="<%= name %>" placeholder="Name">
-</div>
-<div class="form-group">
-  <label for="exampleInputEmail1">Email address</label>
-  <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="<%= email %>">
-  
-</div>
- 
-<button type="submit" class="btn btn-info">Update</button>
-</form>
+<body class="bg-secondary">
+
+  <div class="container-fluid" style="margin-top: 100px;">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <h3 class="text-center card-title mt-3">Customer Update</h3>
+          <div class="card-body">
+            <form action="/customers/update/<%= id %>" method="post" name="form1">
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="text-secondary font-weight-bold">Name</label>
+                <input type="text" class="form-control" name="name" id="name" value="<%= name %>" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="text-secondary font-weight-bold">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="<%= email %>">
+                
+              </div>
+               
+             <div class="form-group text-center">
+              <button type="submit" class="btn btn-secondary btn-sm px-5 py-2 font-weight-bold">Update</button>
+             </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
